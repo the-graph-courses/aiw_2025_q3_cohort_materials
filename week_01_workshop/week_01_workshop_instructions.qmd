@@ -39,12 +39,15 @@ Let's get started!
 
     ```         
     Build an elegant one‑page portfolio website for my "Generative AI for Work & Research" course.
+    Site should be beautiful and rich with beautiful styling, gradients and sections.
     Use the course information and my CV, which are given below. The site should have at least the following sections:
     - About me
     - About the course
     - My weekly submissions (These can be placeholders for now, we will add links to each submission later on)
+    Use Canvas to render the HTML.
     Don't include my email in the site to avoid spam
     ```
+- Upload the course brochure and your CV to the chat window.
 
 -   (If you are very private and don't want a public website with your info online, you can use a pseudonym or use a random sample CV from the internet. e.g. [this one](https://careercenter.ucdavis.edu/sites/g/files/dgvnsk15461/files/media/documents/AES-Agriculture-and-Plants.pdf))
 
