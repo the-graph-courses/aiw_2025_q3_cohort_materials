@@ -45,6 +45,7 @@ Let's get started!
     - About the course
     - My weekly submissions (These can be placeholders for now, we will add links to each submission later on)
     Use Canvas to render the HTML.
+    Don't use frameworks.
     Don't include my email in the site to avoid spam
     ```
 - Upload the course brochure and your CV to the chat window.
