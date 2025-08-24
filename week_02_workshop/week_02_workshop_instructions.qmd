@@ -34,12 +34,10 @@ You will choose one of the following tools based on your coding experience:
 
 1.  **Choose Your Data:**
     *   Go to Gapminder's data repository: [https://gapminder.org/data](https://gapminder.org/data){target="_blank"}
-    *   Browse the indicators and **select TWO indicators** that you hypothesize might be related.
-        *   *Think about what story you want to explore. For example, a famous relationship is GDP per capita vs. Life Expectancy. Consider other potential meaningful connections.*
+    *   Browse the indicators and **select TWO indicators** that you hypothesize might be related which you are interested in: 
+        *   Make sure data is available for the year 2020, as we will be using this year for our analysis. (Official statistics often take a while to be released; 2020 is old enough that accurate data is likely to be available, and recent enough that the data is still relevant.)
+        *   If you have no experience with data analysis, you may want to check with an instructor to make sure the indicators you choose actually make sense to analyze together. You can also fall back on the famous life expectancy vs. GDP per capita relationship.
     *   For each chosen indicator, download the data as a CSV file.
-
-2.  **Data Preparation Note: Data will be subsetted to a single year:**
-    *   After loading your data into Cursor or Julius, you will ask the AI to **subset it to the most recent year that has good data coverage**. "Good data coverage" means not too many missing values. When browsing on Gapminder, try to identify a specific recent year you'd like to focus on that has good coverage for both your chosen indicators, and make a note of this year.
 
 ---
 
@@ -47,7 +45,7 @@ You will choose one of the following tools based on your coding experience:
 
 Please follow the instructions for the tool assigned to your group.
 
-## Section A: For Students WITH Coding Experience (Using Cursor with R)
+## Section A: For Students WITH R Coding Experience (Using Cursor with R)
 
 You will use Cursor to generate an R Markdown report.
 
@@ -55,7 +53,11 @@ You will use Cursor to generate an R Markdown report.
 
     *   You'll need to set up Cursor and can use their free 14-day trial.
 
+    *   Users in a few countries appear unable to access Cursor at the moment. You may need to use a VPN if this is the case. Or switch to the Julius track.
+
     *   **Watch our setup video before you begin:** [AI Automated Data Analysis with R and Cursor (for R users only)](https://thegraphcourses.org/courses/aiw-2025-q2/topics/ai-automated-data-analysis-with-r-and-cursor-for-r-users-only/){target="_blank"}
+
+    *   **You should make sure you are actually using the paid 14-day trial of Cursor.** To do this, check your dashboard here: [https://cursor.com/dashboard](https://cursor.com/dashboard){target="_blank"}. And click the button to start the Pro trial if you are not yet on it. You will need to provide your credit card details to start the trial. But you can immediately cancel it without losing the trial by going to [https://cursor.com/dashboard?tab=billing](https://cursor.com/dashboard?tab=billing){target="_blank"}, then clicking "Manage Subscription" at the top right then "Cancel subscription".
 
 2. **Project folder:**
 
@@ -64,7 +66,7 @@ You will use Cursor to generate an R Markdown report.
 3.  **Generating Your Report in Cursor:**
 
     *   Open your project folder in Cursor. Create a new R Markdown (`.Rmd`) file with an appropriate name.
-    *   Before using the Agent, it's recommended to change the model to **Claude 3.7 Sonnet** for better performance with R. You can usually find this setting in a dropdown menu associated with the chat or agent interface.
+    *   Before using the Agent, it's recommended to change the model to **Claude 4 Sonnet** for better performance with R. You can usually find this setting in a dropdown menu associated with the chat or agent interface.
     *   Then use Cursor's "Agent Mode" to help you write the R code and narrative.
 
     *   **Initial Agent Prompt Idea:**
@@ -81,27 +83,25 @@ You will use Cursor to generate an R Markdown report.
     *   **Specific Task Prompting Example:**
 
         ```
-        Now create a data report in my Rmd file using the two datasets I've provided ([indicator1] and [indicator2]).
+        Now create a data report in my Rmd file using the two datasets I've provided:
+        
+        They are:
+        - [TYPE YOUR INDICATOR 1 NAME HERE]
+        - [TYPE YOUR INDICATOR 2 NAME HERE]
 
         The report should:
-        1. Load both datasets.
-        2. For each indicator, subset the data to `[CHOSEN_YEAR]`.
-        3. Create a world map visualization for the first indicator.
-        4. Create a world map visualization for the second indicator.
-        5. Merge the data for the two indicators.
-        6. Create a scatterplot showing the relationship between these two indicators.
-        7. Provide a brief interpretation of the relationship shown in the scatterplot (you can calculate Pearson's correlation coefficient $$r$$ if it's helpful).
-        Ensure all plots are clearly titled and labeled.
+        1. For each indicator, subset the data to 2020.
+        2. Create a world map visualization for each indicator in 2020.
+        3. Create a scatterplot showing the relationship between these two indicators in 2020.
+        4. Provide a brief interpretation of the relationship between the two indicators.
 
         ```
 
     *   **Iterate and Refine:** Work with the agent to refine the figures and text until you are happy with the report. You can ask it to change the title of a plot, or to use a different color scheme, for example.
 
-    *   **Halluciations related to plots:** Cursor cannot see your plots. It may hallucinate interpretations of the plots that are inaccurate. You can ignore these.
-
     *   **A Note on AI Interaction:**
         *   If the AI seems to be going off track or taking too long, look for a "stop" button (often near the prompt input box) to interrupt it.
-        *   Often, if you don't like the output, it's more effective to go back to your previous prompt, edit it to be clearer or more specific, and resubmit, rather than trying to correct the AI with a long series of follow-up messages. Longer conversations can sometimes confuse the AI.
+        *   If you don't like the output, it's more effective to go back to your previous prompt, edit it to be clearer or more specific, and resubmit, rather than trying to correct the AI with a long series of follow-up messages. Longer conversations can sometimes confuse the AI.
 
     *   **Troubleshooting R Package Installations:**
         *   If Cursor has persistent trouble installing R packages, you might need to install them manually. Create a temporary R script (`.R`) file in your project. In this script, use the `install.packages("package_name")` command for each required package. Run this script. R might ask you to choose a CRAN mirror (a server to download from); pick any. Once the packages are installed, you can delete the temporary R script.
@@ -117,14 +117,14 @@ You will use Julius, an AI data analysis chat-based tool, to analyze your data a
 1.  **Setup Julius:**
 
     *   Go to [Julius.ai](https://julius.ai/){target="_blank"} and sign up.
-    *   For a 2-week trial of premium features, go to your **Settings**, then **Usage**, and under **Institutional Codes**, enter: `GRAPHAIR`
+    *   For a 2-week trial of premium features, go to your **Settings**, then **Usage**, and under **Institutional Codes**, enter the code provided by your instructor.
     *   **Please do not share this code.**
 
 2.  **Starting Your Analysis in Julius:**
     *   Start a new "thread" in Julius.
     *   **Select your tools:**
         *   **Code Language:** Julius can use Python or R. If you have no preference, we recommend selecting **R**. The default figures from R are often a bit nicer, and more members of The Graph team are R experts, so we can better assist with debugging if needed. The code language changer is usually found at the top left of the Julius window.
-        *   **AI Model:** It's recommended to switch to the **Claude 3.7 Sonnet** model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.
+        *   **AI Model:** It's recommended to switch to the **Claude 4 Sonnet** model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.
     *   Now, **upload your two CSV files** to the conversation.
 
 3.  **Chatting with Julius (Example Prompt):**
@@ -132,17 +132,18 @@ You will use Julius, an AI data analysis chat-based tool, to analyze your data a
     *   **Chat with Julius Example Prompt:**
 
         ```
-        I am writing a report on the relationship between the indicators [indicator1] and [indicator2]. Both datasets have been added.
+        I am writing a report on the relationship between two indicators 
+        
+        1. [TYPE YOUR INDICATOR 1 NAME HERE]
+        2. [TYPE YOUR INDICATOR 2 NAME HERE]
+        
+        Both datasets have been added.
 
-        Please help me do the following:
-        1. Load both datasets.
-        2. For each indicator, subset the data to `[CHOSEN_YEAR]`.
-        3. Create a world map visualization for the first indicator.
-        4. Create a world map visualization for the second indicator.
-        5. Now merge the data for the chosen indicators.
-        6. Create a scatterplot showing the relationship between these two indicators.
-        7. Provide a brief interpretation of the relationship shown in the scatterplot (you can calculate Pearson's correlation coefficient $$r$$ if it's helpful).
-        Make sure the plots have good titles and labels.
+        Run the following steps for the report:
+        1. For each indicator, subset the data to 2020.
+        2. Create a world map visualization for each indicator in 2020.
+        3. Create a scatterplot showing the relationship between these two indicators in 2020.
+        4. Provide a brief interpretation of the relationship between the two indicators.
         ```
 
 
@@ -150,11 +151,11 @@ You will use Julius, an AI data analysis chat-based tool, to analyze your data a
 
     *   **A Note on AI Interaction:**
         *   If the AI seems to be going off track or taking too long, look for a "stop" button (often near the prompt input box) to interrupt it.
-        *   Often, if you don't like the output, it's more effective to go back to your previous prompt, edit it to be clearer or more specific, and resubmit, rather than trying to correct the AI with a long series of follow-up messages. Longer conversations can sometimes confuse the AI.
+        * If you don't like a change made by the model, look for the revert button at the bottom right of your previous message and click on it.
 
 4.  **Creating Your Report Document:**
     *   **Download Outputs:** Download the individual plots (as images, e.g., PNG) that Julius generates. You will also copy any key text outputs, such as data summaries or interpretations.
-    *   **Create a DOCX/GDocs file:** Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.
+    *   **Create a DOCX/Google Docs file:** Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.
     *   **Assemble initial report content:**
         *   Add a title, your name, and the date.
         *   Insert the plots you downloaded.
@@ -195,4 +196,5 @@ As a final step, you can add your report to your portfolio website which you cre
         ```
 
     *   ChatGPT will provide you with updated `index.html` code. Replace the content of your `index.html` file in your GitHub repository with this new code. Commit and push the changes.
+    
     *   Verify that your live GitHub Pages site now shows the new entry and the link works.

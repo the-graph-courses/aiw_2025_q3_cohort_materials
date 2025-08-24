@@ -129,15 +129,12 @@ window.Quarto = {
 <li><strong>Choose Your Data:</strong>
 <ul>
 <li>Go to Gapminder’s data repository: <a href="https://gapminder.org/data" target="_blank">https://gapminder.org/data</a></li>
-<li>Browse the indicators and <strong>select TWO indicators</strong> that you hypothesize might be related.
+<li>Browse the indicators and <strong>select TWO indicators</strong> that you hypothesize might be related which you are interested in:
 <ul>
-<li><em>Think about what story you want to explore. For example, a famous relationship is GDP per capita vs.&nbsp;Life Expectancy. Consider other potential meaningful connections.</em></li>
+<li>Make sure data is available for the year 2020, as we will be using this year for our analysis. (Official statistics often take a while to be released; 2020 is old enough that accurate data is likely to be available, and recent enough that the data is still relevant.)</li>
+<li>If you have no experience with data analysis, you may want to check with an instructor to make sure the indicators you choose actually make sense to analyze together. You can also fall back on the famous life expectancy vs.&nbsp;GDP per capita relationship.</li>
 </ul></li>
 <li>For each chosen indicator, download the data as a CSV file.</li>
-</ul></li>
-<li><strong>Data Preparation Note: Data will be subsetted to a single year:</strong>
-<ul>
-<li>After loading your data into Cursor or Julius, you will ask the AI to <strong>subset it to the most recent year that has good data coverage</strong>. “Good data coverage” means not too many missing values. When browsing on Gapminder, try to identify a specific recent year you’d like to focus on that has good coverage for both your chosen indicators, and make a note of this year.</li>
 </ul></li>
 </ol>
 <hr>
@@ -145,14 +142,16 @@ window.Quarto = {
 <section id="part-2-tool-specific-instructions" class="level1">
 <h1>Part 2: Tool-Specific Instructions</h1>
 <p>Please follow the instructions for the tool assigned to your group.</p>
-<section id="section-a-for-students-with-coding-experience-using-cursor-with-r" class="level2">
-<h2 class="anchored" data-anchor-id="section-a-for-students-with-coding-experience-using-cursor-with-r">Section A: For Students WITH Coding Experience (Using Cursor with R)</h2>
+<section id="section-a-for-students-with-r-coding-experience-using-cursor-with-r" class="level2">
+<h2 class="anchored" data-anchor-id="section-a-for-students-with-r-coding-experience-using-cursor-with-r">Section A: For Students WITH R Coding Experience (Using Cursor with R)</h2>
 <p>You will use Cursor to generate an R Markdown report.</p>
 <ol type="1">
 <li><p><strong>Setup Cursor:</strong></p>
 <ul>
 <li><p>You’ll need to set up Cursor and can use their free 14-day trial.</p></li>
+<li><p>Users in a few countries appear unable to access Cursor at the moment. You may need to use a VPN if this is the case. Or switch to the Julius track.</p></li>
 <li><p><strong>Watch our setup video before you begin:</strong> <a href="https://thegraphcourses.org/courses/aiw-2025-q2/topics/ai-automated-data-analysis-with-r-and-cursor-for-r-users-only/" target="_blank">AI Automated Data Analysis with R and Cursor (for R users only)</a></p></li>
+<li><p><strong>You should make sure you are actually using the paid 14-day trial of Cursor.</strong> To do this, check your dashboard here: <a href="https://cursor.com/dashboard" target="_blank">https://cursor.com/dashboard</a>. And click the button to start the Pro trial if you are not yet on it. You will need to provide your credit card details to start the trial. But you can immediately cancel it without losing the trial by going to <a href="https://cursor.com/dashboard?tab=billing" target="_blank">https://cursor.com/dashboard?tab=billing</a>, then clicking “Manage Subscription” at the top right then “Cancel subscription”.</p></li>
 </ul></li>
 <li><p><strong>Project folder:</strong></p>
 <ul>
@@ -161,7 +160,7 @@ window.Quarto = {
 <li><p><strong>Generating Your Report in Cursor:</strong></p>
 <ul>
 <li><p>Open your project folder in Cursor. Create a new R Markdown (<code>.Rmd</code>) file with an appropriate name.</p></li>
-<li><p>Before using the Agent, it’s recommended to change the model to <strong>Claude 3.7 Sonnet</strong> for better performance with R. You can usually find this setting in a dropdown menu associated with the chat or agent interface.</p></li>
+<li><p>Before using the Agent, it’s recommended to change the model to <strong>Claude 4 Sonnet</strong> for better performance with R. You can usually find this setting in a dropdown menu associated with the chat or agent interface.</p></li>
 <li><p>Then use Cursor’s “Agent Mode” to help you write the R code and narrative.</p></li>
 <li><p><strong>Initial Agent Prompt Idea:</strong> Here is an example of an initial agent prompt:</p>
 <pre><code>You are an AI agent that creates R data reports.
@@ -171,24 +170,23 @@ Use plots, tables, and inline R code where appropriate.
 Code should be hidden from the output.
 Your task is further described below.</code></pre></li>
 <li><p><strong>Specific Task Prompting Example:</strong></p>
-<pre><code>Now create a data report in my Rmd file using the two datasets I've provided ([indicator1] and [indicator2]).
+<pre><code>Now create a data report in my Rmd file using the two datasets I've provided:
+
+They are:
+- [TYPE YOUR INDICATOR 1 NAME HERE]
+- [TYPE YOUR INDICATOR 2 NAME HERE]
 
 The report should:
-1. Load both datasets.
-2. For each indicator, subset the data to `[CHOSEN_YEAR]`.
-3. Create a world map visualization for the first indicator.
-4. Create a world map visualization for the second indicator.
-5. Merge the data for the two indicators.
-6. Create a scatterplot showing the relationship between these two indicators.
-7. Provide a brief interpretation of the relationship shown in the scatterplot (you can calculate Pearson's correlation coefficient $$r$$ if it's helpful).
-Ensure all plots are clearly titled and labeled.
+1. For each indicator, subset the data to 2020.
+2. Create a world map visualization for each indicator in 2020.
+3. Create a scatterplot showing the relationship between these two indicators in 2020.
+4. Provide a brief interpretation of the relationship between the two indicators.
 </code></pre></li>
 <li><p><strong>Iterate and Refine:</strong> Work with the agent to refine the figures and text until you are happy with the report. You can ask it to change the title of a plot, or to use a different color scheme, for example.</p></li>
-<li><p><strong>Halluciations related to plots:</strong> Cursor cannot see your plots. It may hallucinate interpretations of the plots that are inaccurate. You can ignore these.</p></li>
 <li><p><strong>A Note on AI Interaction:</strong></p>
 <ul>
 <li>If the AI seems to be going off track or taking too long, look for a “stop” button (often near the prompt input box) to interrupt it.</li>
-<li>Often, if you don’t like the output, it’s more effective to go back to your previous prompt, edit it to be clearer or more specific, and resubmit, rather than trying to correct the AI with a long series of follow-up messages. Longer conversations can sometimes confuse the AI.</li>
+<li>If you don’t like the output, it’s more effective to go back to your previous prompt, edit it to be clearer or more specific, and resubmit, rather than trying to correct the AI with a long series of follow-up messages. Longer conversations can sometimes confuse the AI.</li>
 </ul></li>
 <li><p><strong>Troubleshooting R Package Installations:</strong></p>
 <ul>
@@ -206,7 +204,7 @@ Ensure all plots are clearly titled and labeled.
 <li><p><strong>Setup Julius:</strong></p>
 <ul>
 <li>Go to <a href="https://julius.ai/" target="_blank">Julius.ai</a> and sign up.</li>
-<li>For a 2-week trial of premium features, go to your <strong>Settings</strong>, then <strong>Usage</strong>, and under <strong>Institutional Codes</strong>, enter: <code>GRAPHAIR</code></li>
+<li>For a 2-week trial of premium features, go to your <strong>Settings</strong>, then <strong>Usage</strong>, and under <strong>Institutional Codes</strong>, enter the code provided by your instructor.</li>
 <li><strong>Please do not share this code.</strong></li>
 </ul></li>
 <li><p><strong>Starting Your Analysis in Julius:</strong></p>
@@ -215,35 +213,36 @@ Ensure all plots are clearly titled and labeled.
 <li><strong>Select your tools:</strong>
 <ul>
 <li><strong>Code Language:</strong> Julius can use Python or R. If you have no preference, we recommend selecting <strong>R</strong>. The default figures from R are often a bit nicer, and more members of The Graph team are R experts, so we can better assist with debugging if needed. The code language changer is usually found at the top left of the Julius window.</li>
-<li><strong>AI Model:</strong> It’s recommended to switch to the <strong>Claude 3.7 Sonnet</strong> model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.</li>
+<li><strong>AI Model:</strong> It’s recommended to switch to the <strong>Claude 4 Sonnet</strong> model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.</li>
 </ul></li>
 <li>Now, <strong>upload your two CSV files</strong> to the conversation.</li>
 </ul></li>
 <li><p><strong>Chatting with Julius (Example Prompt):</strong></p>
 <ul>
 <li><p><strong>Chat with Julius Example Prompt:</strong></p>
-<pre><code>I am writing a report on the relationship between the indicators [indicator1] and [indicator2]. Both datasets have been added.
+<pre><code>I am writing a report on the relationship between two indicators 
 
-Please help me do the following:
-1. Load both datasets.
-2. For each indicator, subset the data to `[CHOSEN_YEAR]`.
-3. Create a world map visualization for the first indicator.
-4. Create a world map visualization for the second indicator.
-5. Now merge the data for the chosen indicators.
-6. Create a scatterplot showing the relationship between these two indicators.
-7. Provide a brief interpretation of the relationship shown in the scatterplot (you can calculate Pearson's correlation coefficient $$r$$ if it's helpful).
-Make sure the plots have good titles and labels.</code></pre></li>
+1. [TYPE YOUR INDICATOR 1 NAME HERE]
+2. [TYPE YOUR INDICATOR 2 NAME HERE]
+
+Both datasets have been added.
+
+Run the following steps for the report:
+1. For each indicator, subset the data to 2020.
+2. Create a world map visualization for each indicator in 2020.
+3. Create a scatterplot showing the relationship between these two indicators in 2020.
+4. Provide a brief interpretation of the relationship between the two indicators.</code></pre></li>
 <li><p><strong>Review and Refine:</strong> Julius will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. You can ask it to change the title of a plot, or to use a different color scheme, for example.</p></li>
 <li><p><strong>A Note on AI Interaction:</strong></p>
 <ul>
 <li>If the AI seems to be going off track or taking too long, look for a “stop” button (often near the prompt input box) to interrupt it.</li>
-<li>Often, if you don’t like the output, it’s more effective to go back to your previous prompt, edit it to be clearer or more specific, and resubmit, rather than trying to correct the AI with a long series of follow-up messages. Longer conversations can sometimes confuse the AI.</li>
+<li>If you don’t like a change made by the model, look for the revert button at the bottom right of your previous message and click on it.</li>
 </ul></li>
 </ul></li>
 <li><p><strong>Creating Your Report Document:</strong></p>
 <ul>
 <li><strong>Download Outputs:</strong> Download the individual plots (as images, e.g., PNG) that Julius generates. You will also copy any key text outputs, such as data summaries or interpretations.</li>
-<li><strong>Create a DOCX/GDocs file:</strong> Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.</li>
+<li><strong>Create a DOCX/Google Docs file:</strong> Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.</li>
 <li><strong>Assemble initial report content:</strong>
 <ul>
 <li>Add a title, your name, and the date.</li>
