@@ -123,7 +123,7 @@ You will use Julius, an AI data analysis chat-based tool, to analyze your data a
 2.  **Starting Your Analysis in Julius:**
     *   Start a new "thread" in Julius.
     *   **Select your tools:**
-        *   **Code Language:** Julius can use Python or R. If you have no preference, we recommend selecting **R**. The default figures from R are often a bit nicer, and more members of The Graph team are R experts, so we can better assist with debugging if needed. The code language changer is usually found at the top left of the Julius window.
+        *   **Code Language:** Julius can use Python or R. We recommend selecting **Python** as it typically has fewer package installation issues and better support for interactive visualizations. The code language changer is usually found at the top left of the Julius window.
         *   **AI Model:** It's recommended to switch to the **Claude 4 Sonnet** model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.
     *   Now, **upload your two CSV files** to the conversation.
 
@@ -154,7 +154,7 @@ You will use Julius, an AI data analysis chat-based tool, to analyze your data a
         * If you don't like a change made by the model, look for the revert button at the bottom right of your previous message and click on it.
 
 4.  **Creating Your Report Document:**
-    *   **Download Outputs:** Download the individual plots (as images, e.g., PNG) that Julius generates. You will also copy any key text outputs, such as data summaries or interpretations.
+    *   **Download Outputs:** Download the individual plots (as images, e.g., PNG) or take screenshots of the plots that Julius generates. You will also copy any key text outputs, such as data summaries or interpretations.
     *   **Create a DOCX/Google Docs file:** Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.
     *   **Assemble initial report content:**
         *   Add a title, your name, and the date.
