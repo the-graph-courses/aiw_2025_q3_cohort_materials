@@ -116,8 +116,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="tool-tracks">Tool Tracks</h2>
 <p>You will choose one of the following tools based on your coding experience:</p>
 <ul>
-<li><p><strong>Students WITH significant coding experience in R:</strong> You should use <strong>Cursor</strong>, an AI-powered code editor, with R.</p></li>
 <li><p><strong>Students WITHOUT significant coding experience:</strong> You will use <strong>Julius</strong>, a more user-friendly AI data analysis tool with a chat interface.</p></li>
+<li><p><strong>Students WITH significant coding experience in R:</strong> You should use <strong>Cursor</strong>, an AI-powered code editor, with R.</p></li>
 <li><p><strong>If you finish your assigned tool track early, you are encouraged to try the other one!</strong></p></li>
 </ul>
 <hr>
@@ -142,8 +142,72 @@ window.Quarto = {
 <section id="part-2-tool-specific-instructions" class="level1">
 <h1>Part 2: Tool-Specific Instructions</h1>
 <p>Please follow the instructions for the tool assigned to your group.</p>
-<section id="section-a-for-students-with-r-coding-experience-using-cursor-with-r" class="level2">
-<h2 class="anchored" data-anchor-id="section-a-for-students-with-r-coding-experience-using-cursor-with-r">Section A: For Students WITH R Coding Experience (Using Cursor with R)</h2>
+<section id="section-a-for-students-without-prior-coding-experience-using-julius" class="level2">
+<h2 class="anchored" data-anchor-id="section-a-for-students-without-prior-coding-experience-using-julius">Section A: For Students WITHOUT Prior Coding Experience (Using Julius)</h2>
+<p>You will use Julius, an AI data analysis chat-based tool, to analyze your data and generate content for your report.</p>
+<ol type="1">
+<li><p><strong>Setup Julius:</strong></p>
+<ul>
+<li>Go to <a href="https://julius.ai/" target="_blank">Julius.ai</a> and sign up.</li>
+<li>For a 2-week trial of premium features, go to your <strong>Account &amp; Billing</strong>, then <strong>Account</strong>, and under <strong>Institutional Codes</strong>, enter the code provided by your instructor.</li>
+<li><strong>Please do not share this code.</strong></li>
+</ul></li>
+<li><p><strong>Starting Your Analysis in Julius:</strong></p>
+<ul>
+<li>Start a new “thread” in Julius.</li>
+<li><strong>Select your tools:</strong>
+<ul>
+<li><strong>Code Language:</strong> Julius can use Python or R. We recommend selecting <strong>Python</strong> as it typically has fewer package installation issues and better support for interactive visualizations. The code language changer is usually found at the top left of the Julius window.</li>
+<li><strong>AI Model:</strong> It’s recommended to switch to the <strong>Claude 4 Sonnet</strong> model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.</li>
+</ul></li>
+<li><strong>IMPORTANT: Upload your data first:</strong> Before writing your prompt, <strong>upload your two CSV files</strong> to the conversation. This ensures Julius has access to your data when you give it instructions.</li>
+</ul></li>
+<li><p><strong>Chatting with Julius (Example Prompt):</strong></p>
+<ul>
+<li><p><strong>Chat with Julius Example Prompt:</strong></p>
+<pre><code>I am writing a report on the relationship between two indicators 
+
+1. [TYPE YOUR INDICATOR 1 NAME HERE]
+2. [TYPE YOUR INDICATOR 2 NAME HERE]
+
+Both datasets have been added.
+
+Run the following steps for the report:
+1. For each indicator, subset the data to 2020.
+2. Create a world map visualization for each indicator in 2020.
+3. Create a scatterplot showing the relationship between these two indicators in 2020.
+4. Provide a brief interpretation of the relationship between the two indicators.</code></pre></li>
+<li><p><strong>Review and Refine:</strong> Julius will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. You can ask it to change the title of a plot, or to use a different color scheme, for example.</p></li>
+<li><p><strong>A Note on AI Interaction:</strong></p>
+<ul>
+<li>If the AI seems to be going off track or taking too long, look for a “stop” button (often near the prompt input box) to interrupt it.</li>
+<li>If you don’t like a change made by the model, look for the revert button at the bottom right of your previous message and click on it.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Creating Your Report Document:</strong></p>
+<ul>
+<li><strong>Download Outputs:</strong> Download the individual plots (as images, e.g., PNG) or take screenshots of the plots that Julius generates. You will also copy any key text outputs, such as data summaries or interpretations.</li>
+<li><strong>Create a DOCX/Google Docs file:</strong> Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.</li>
+<li><strong>Assemble initial report content:</strong>
+<ul>
+<li>Add a title, your name, and the date.</li>
+<li>Insert the plots you downloaded.</li>
+<li>Paste in the relevant text outputs from Julius.</li>
+<li>Organize this content into a clean and readable report.</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Add Your Reflection:</strong></p>
+<ul>
+<li>Before finalizing your report, add your short reflection (point 5 from “Your final report should contain”) to your document.</li>
+</ul></li>
+<li><p><strong>Final Output:</strong></p>
+<ul>
+<li><strong>Export as PDF</strong> from your word processor. This PDF is your primary submission.</li>
+</ul></li>
+</ol>
+</section>
+<section id="section-b-for-students-with-r-coding-experience-using-cursor-with-r" class="level2">
+<h2 class="anchored" data-anchor-id="section-b-for-students-with-r-coding-experience-using-cursor-with-r">Section B: For Students WITH R Coding Experience (Using Cursor with R)</h2>
 <p>You will use Cursor to generate an R Markdown report.</p>
 <ol type="1">
 <li><p><strong>Setup Cursor:</strong></p>
@@ -195,70 +259,6 @@ The report should:
 </ul></li>
 <li><p><strong>Add Your Reflection:</strong> Before your final knit, make sure to add your short reflection (point 5 from “Your final report should contain”) directly into your R Markdown file. This should be part of the narrative of your report.</p></li>
 <li><p><strong>Final Output:</strong> Your primary submission will be the HTML file generated from knitting your R Markdown file. (That is, while your AI agent will output the report as an .md file while it is working, you should change the output format when you are done and ready to submit. To do this, in your .Rmd file, change <code>output: github_document</code> to <code>output: html_document</code> in the header section before your final knit.)</p></li>
-</ol>
-</section>
-<section id="section-b-for-students-without-prior-coding-experience-using-julius" class="level2">
-<h2 class="anchored" data-anchor-id="section-b-for-students-without-prior-coding-experience-using-julius">Section B: For Students WITHOUT Prior Coding Experience (Using Julius)</h2>
-<p>You will use Julius, an AI data analysis chat-based tool, to analyze your data and generate content for your report.</p>
-<ol type="1">
-<li><p><strong>Setup Julius:</strong></p>
-<ul>
-<li>Go to <a href="https://julius.ai/" target="_blank">Julius.ai</a> and sign up.</li>
-<li>For a 2-week trial of premium features, go to your <strong>Account &amp; Billing</strong>, then <strong>Account</strong>, and under <strong>Institutional Codes</strong>, enter the code provided by your instructor.</li>
-<li><strong>Please do not share this code.</strong></li>
-</ul></li>
-<li><p><strong>Starting Your Analysis in Julius:</strong></p>
-<ul>
-<li>Start a new “thread” in Julius.</li>
-<li><strong>Select your tools:</strong>
-<ul>
-<li><strong>Code Language:</strong> Julius can use Python or R. We recommend selecting <strong>Python</strong> as it typically has fewer package installation issues and better support for interactive visualizations. The code language changer is usually found at the top left of the Julius window.</li>
-<li><strong>AI Model:</strong> It’s recommended to switch to the <strong>Claude 4 Sonnet</strong> model for potentially better results. The model selection is typically in a dropdown menu below the prompt input box.</li>
-</ul></li>
-<li>Now, <strong>upload your two CSV files</strong> to the conversation.</li>
-</ul></li>
-<li><p><strong>Chatting with Julius (Example Prompt):</strong></p>
-<ul>
-<li><p><strong>Chat with Julius Example Prompt:</strong></p>
-<pre><code>I am writing a report on the relationship between two indicators 
-
-1. [TYPE YOUR INDICATOR 1 NAME HERE]
-2. [TYPE YOUR INDICATOR 2 NAME HERE]
-
-Both datasets have been added.
-
-Run the following steps for the report:
-1. For each indicator, subset the data to 2020.
-2. Create a world map visualization for each indicator in 2020.
-3. Create a scatterplot showing the relationship between these two indicators in 2020.
-4. Provide a brief interpretation of the relationship between the two indicators.</code></pre></li>
-<li><p><strong>Review and Refine:</strong> Julius will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. You can ask it to change the title of a plot, or to use a different color scheme, for example.</p></li>
-<li><p><strong>A Note on AI Interaction:</strong></p>
-<ul>
-<li>If the AI seems to be going off track or taking too long, look for a “stop” button (often near the prompt input box) to interrupt it.</li>
-<li>If you don’t like a change made by the model, look for the revert button at the bottom right of your previous message and click on it.</li>
-</ul></li>
-</ul></li>
-<li><p><strong>Creating Your Report Document:</strong></p>
-<ul>
-<li><strong>Download Outputs:</strong> Download the individual plots (as images, e.g., PNG) or take screenshots of the plots that Julius generates. You will also copy any key text outputs, such as data summaries or interpretations.</li>
-<li><strong>Create a DOCX/Google Docs file:</strong> Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.</li>
-<li><strong>Assemble initial report content:</strong>
-<ul>
-<li>Add a title, your name, and the date.</li>
-<li>Insert the plots you downloaded.</li>
-<li>Paste in the relevant text outputs from Julius.</li>
-<li>Organize this content into a clean and readable report.</li>
-</ul></li>
-</ul></li>
-<li><p><strong>Add Your Reflection:</strong></p>
-<ul>
-<li>Before finalizing your report, add your short reflection (point 5 from “Your final report should contain”) to your document.</li>
-</ul></li>
-<li><p><strong>Final Output:</strong></p>
-<ul>
-<li><strong>Export as PDF</strong> from your word processor. This PDF is your primary submission.</li>
-</ul></li>
 </ol>
 <hr>
 </section>
