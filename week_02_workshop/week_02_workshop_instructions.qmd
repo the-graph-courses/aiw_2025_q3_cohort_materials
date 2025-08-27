@@ -76,7 +76,7 @@ You will use Julius, an AI data analysis chat-based tool, to analyze your data a
 
         Run the following steps for the report:
         1. For each indicator, subset the data to 2020.
-        2. Create a world map visualization for each indicator in 2020.
+        2. Create a world map visualization for each indicator in 2020. (Use plotly)
         3. Create a scatterplot showing the relationship between these two indicators in 2020.
         4. Provide a brief interpretation of the relationship between the two indicators.
         ```
