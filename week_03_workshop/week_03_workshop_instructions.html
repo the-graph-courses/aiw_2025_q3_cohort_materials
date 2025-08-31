@@ -106,6 +106,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>Welcome! In this assignment, you’ll use Large Language Models (LLMs) directly within Google Sheets to extract specific information from hundreds of data analysis job postings. (This is the kind of analysis that we do at Graph Courses to inform our course offerings.)</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Side Note:</strong> The assignment will require using some snippets of code. Do not recoil from this, even if you are not a programmer. Because AI tools work primarily with code, you will maximize your use of these tools if you are not scared of working with code once in a while. Most of the time, the AI’s themselves can help you generate the code you need. For example, the MYGPT function code was generated with the help of some LLM models.</p>
+</div>
+</div>
 <p>Afterwards, you’ll take this extracted data and use an AI-powered analysis tool (Julius or Cursor, based on your experience from the previous workshop) to create visualizations and a concise report.</p>
 <section id="prerequisites" class="level2">
 <h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
@@ -158,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">MYGPT</span>(prompt<span class="op">,</span> model<span class="op">,</span> key) {</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>prompt) <span class="cf">return</span> <span class="st">''</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>model) <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">'Model ID required (e.g. "google/gemini-2.5-flash-preview").'</span>)<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>model) <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">'Model ID required (e.g. "google/gemini-2.5-flash").'</span>)<span class="op">;</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>key) <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">'OpenRouter API key required.'</span>)<span class="op">;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> url <span class="op">=</span> <span class="st">'https://openrouter.ai/api/v1/chat/completions'</span><span class="op">;</span></span>
@@ -197,21 +210,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="part-1b.-extracting-years-of-experience-required">Part 1B. Extracting Years of Experience Required</h2>
 <p>You’ll use the LLM API to find the minimum years of experience mentioned in the <code>Job Description</code> column.</p>
 <ol type="1">
-<li><strong>Create New Column:</strong> In your sheet, find the first empty column to the right of your data. Add a header like <code>Minimum Years Experience</code>.</li>
-<li><strong>Formulate the Prompt &amp; Apply <code>MYGPT</code>:</strong>
+<li><p><strong>Create New Column:</strong> In your sheet, find the first empty column to the right of your data. Add a header like <code>Minimum Years Experience</code>.</p></li>
+<li><p><strong>Formulate the Prompt &amp; Apply <code>MYGPT</code>:</strong></p>
 <ul>
-<li>We will use the <code>google/gemini-2.5-flash-preview</code> model.</li>
+<li>We will use the <code>google/gemini-2.5-flash</code> model.</li>
 <li>Assuming your first job description is in cell <code>C2</code> (adjust if it’s in a different column for your imported data) and your API key is in cell <code>M2</code> , the formula in the first cell under your <code>Minimum Years Experience</code> header would be:</li>
 </ul>
-<pre><code>=MYGPT(CONCATENATE("Extract the minimum years of experience required from this job description. Return ONLY a number. If a range is given, return the lower number. If no years of experience are explicitly mentioned, return 'NA'. Here's the job description: ", C2), "google/gemini-2.5-flash-preview", $M$2)</code></pre>
+<pre><code>=MYGPT(CONCATENATE("Extract the minimum years of experience required from this job description. Return ONLY a number. If a range is given, return the lower number. If no years of experience are explicitly mentioned, return 'NA'. Here's the job description: ", C2), "google/gemini-2.5-flash", $M$2)</code></pre>
 <ul>
 <li>Test this on a few rows (e.g.&nbsp;2-5) and manually verify that the outputs are reasonable.</li>
 </ul></li>
-<li><strong>Apply to All Rows:</strong>
+<li><p><strong>Apply to All Rows:</strong></p>
 <ul>
 <li>Once you have tested the formula on a few rows, drag the fill handle (the small square at the bottom-right of the selected cell) down to apply it to all job descriptions. This will make an API call for each row, so it might take a moment.</li>
 </ul></li>
-<li><strong>Lock in Results:</strong> Once the LLM has processed the column and you have the results:
+<li><p><strong>Lock in Results:</strong> Once the LLM has processed the column and you have the results:</p>
 <ul>
 <li>Select the column of results and copy them (Ctrl+C or Cmd+C).</li>
 <li>Right-click on the column header again, then <code>Paste special → Values only</code>. This converts the formulas to static text, preventing accidental re-runs and saving API costs.</li>
@@ -220,28 +233,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="part-1c.-extracting-programming-language-requirements" class="level2">
 <h2 class="anchored" data-anchor-id="part-1c.-extracting-programming-language-requirements">Part 1C. Extracting Programming Language Requirements</h2>
-<p>Next, you’ll ask the LLM to identify if job descriptions mention R, Python, both, or neither.</p>
+<p>Next, you’ll ask the LLM to identify what programming languages are mentioned as being required in the job descriptions. In particular, we want to know whether R, Python, both or neither are mentioned.</p>
 <ol type="1">
 <li><strong>Create New Column:</strong> Add another new column with a header like <code>Data Languages</code>.</li>
 <li><strong>Craft Your Own Prompt:</strong>
 <ul>
 <li>For this task, you need to write the prompt yourself.</li>
-<li>Your prompt must clearly instruct the LLM to analyze the <code>Job Description</code> and return <strong>ONLY one of these four specific strings</strong> based on the data programming language requirements in the job description: R, Python, Both, or Neither.**</li>
+<li>Your prompt must clearly instruct the LLM to analyze the <code>Job Description</code> and return <strong>ONLY one of these four specific strings</strong> based on the data programming language requirements in the job description: R, Python, Both, or Neither.</li>
 <li><strong>Hint:</strong> Be very explicit. A good prompt will state the options clearly and tell the model to choose only one.</li>
 </ul></li>
 <li><strong>Apply <code>MYGPT</code> Function:</strong>
 <ul>
-<li>Use your crafted prompt with the <code>MYGPT</code> function, similar to Task 1, concatenating it with the relevant job description cell (e.g., <code>C2</code>) and using <code>google/gemini-2.5-flash-preview</code> and your API key reference (e.g., <code>$M$2</code>).</li>
+<li>Use your crafted prompt with the <code>MYGPT</code> function, similar to Task 1, concatenating it with the relevant job description cell (e.g., <code>C2</code>) and using <code>google/gemini-2.5-flash</code> and your API key reference (e.g., <code>$M$2</code>).</li>
 <li>Apply to a few rows first to validate that the model is doing what you want, then to all rows.</li>
 </ul></li>
 <li><strong>Lock in Results:</strong> Again, once processed, select all cells with results in your <code>Data Languages</code> column, copy them, and then paste special as values only.</li>
 </ol>
-</section>
-<section id="side-note-is-an-llm-needed-just-to-extract-r-and-python" class="level2">
-<h2 class="anchored" data-anchor-id="side-note-is-an-llm-needed-just-to-extract-r-and-python">Side Note: Is An LLM Needed just to extract ‘R’ and ‘Python’?</h2>
-<p>A valid question at this point is “Is an LLM needed just to extract R and Python? Can’t I just use a simple text search?” While this would work for Python, it would not work for R, unfortunately.</p>
-<p>The challenge is that “R” is an extremely common letter in English text. A simple text search for “R” in job descriptions would return a lot of false positives like “R &amp; D (research and development)”, “H R (human resources)”, “RA (research assistant)” and others.</p>
-<p>An LLM is more robust because it understands context, allowing it to accurately distinguish between what capital R means in “R programming” and what it means in “HR department”.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Side Note:</strong> An interesting question at this point is “Is an LLM needed just to extract R and Python? Can’t I just use a simple text search?” While this would work for Python, it would not work for R, unfortunately.</p>
+<p>The challenge is that “R” is an extremely common letter in English text. A simple text search for “R” in job descriptions would return a lot of false positives like “R &amp; D (research and development)”, “H R (human resources)”, “RA (research assistant)” and others. An LLM is more robust because it understands context, allowing it to accurately distinguish between what capital R means in “R programming” and what it means in “HR department”.</p>
+</div>
+</div>
 <hr>
 </section>
 </section>
@@ -302,7 +323,7 @@ Help me generate a report with the following figures:
 - A scatter plot of 'Minimum Years Experience ' vs. 'Median Salary Estimate USD'. 
 - A box plot of 'Median Salary Estimate USD' grouped by 'Data Languages'. 
 
-I will compile these into a report and add my own introduction, interpretation, and reflection.</code></pre></li>
+I will add my own introduction, interpretation, and reflection.</code></pre></li>
 </ul></li>
 </ol>
 <section id="side-note-why-this-multi-step-process" class="level2">

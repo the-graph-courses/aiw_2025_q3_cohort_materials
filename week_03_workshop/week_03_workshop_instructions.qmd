@@ -8,6 +8,11 @@ author: "The Graph Courses"
 
 Welcome! In this assignment, you'll use Large Language Models (LLMs) directly within Google Sheets to extract specific information from hundreds of data analysis job postings. (This is the kind of analysis that we do at Graph Courses to inform our course offerings.)
 
+::: {.callout-note}
+
+**Side Note:** The assignment will require using some snippets of code. Do not recoil from this, even if you are not a programmer. Because AI tools work primarily with code, you will maximize your use of these tools if you are not scared of working with code once in a while. Most of the time, the AI's themselves can help you generate the code you need. For example, the MYGPT function code was generated with the help of some LLM models.
+:::
+
 Afterwards, you'll take this extracted data and use an AI-powered analysis tool (Julius or Cursor, based on your experience from the previous workshop) to create visualizations and a concise report.
 
 ## Prerequisites
@@ -63,7 +68,7 @@ You will begin by setting up Google Sheets to call an LLM API to extract specifi
     ``` javascript
     function MYGPT(prompt, model, key) {
       if (!prompt) return '';
-      if (!model) throw new Error('Model ID required (e.g. "google/gemini-2.5-flash-preview").');
+      if (!model) throw new Error('Model ID required (e.g. "google/gemini-2.5-flash").');
       if (!key) throw new Error('OpenRouter API key required.');
 
       const url = 'https://openrouter.ai/api/v1/chat/completions';
@@ -105,11 +110,11 @@ You'll use the LLM API to find the minimum years of experience mentioned in the 
 
 2.  **Formulate the Prompt & Apply `MYGPT`:**
 
-    -   We will use the `google/gemini-2.5-flash-preview` model.
+    -   We will use the `google/gemini-2.5-flash` model.
     -   Assuming your first job description is in cell `C2` (adjust if it's in a different column for your imported data) and your API key is in cell `M2` , the formula in the first cell under your `Minimum Years Experience` header would be:
 
     ```         
-    =MYGPT(CONCATENATE("Extract the minimum years of experience required from this job description. Return ONLY a number. If a range is given, return the lower number. If no years of experience are explicitly mentioned, return 'NA'. Here's the job description: ", C2), "google/gemini-2.5-flash-preview", $M$2)
+    =MYGPT(CONCATENATE("Extract the minimum years of experience required from this job description. Return ONLY a number. If a range is given, return the lower number. If no years of experience are explicitly mentioned, return 'NA'. Here's the job description: ", C2), "google/gemini-2.5-flash", $M$2)
     ```
 
     -   Test this on a few rows (e.g. 2-5) and manually verify that the outputs are reasonable.
@@ -125,25 +130,26 @@ You'll use the LLM API to find the minimum years of experience mentioned in the 
 
 ## Part 1C. Extracting Programming Language Requirements
 
-Next, you'll ask the LLM to identify if job descriptions mention R, Python, both, or neither.
+Next, you'll ask the LLM to identify what programming languages are mentioned as being required in the job descriptions. In particular, we want to know whether R, Python, both or neither are mentioned.
 
 1.  **Create New Column:** Add another new column with a header like `Data Languages`.
 2.  **Craft Your Own Prompt:**
     -   For this task, you need to write the prompt yourself.
-    -   Your prompt must clearly instruct the LLM to analyze the `Job Description` and return **ONLY one of these four specific strings** based on the data programming language requirements in the job description: R, Python, Both, or Neither.\*\*
+    -   Your prompt must clearly instruct the LLM to analyze the `Job Description` and return **ONLY one of these four specific strings** based on the data programming language requirements in the job description: R, Python, Both, or Neither.
     -   **Hint:** Be very explicit. A good prompt will state the options clearly and tell the model to choose only one.
 3.  **Apply `MYGPT` Function:**
-    -   Use your crafted prompt with the `MYGPT` function, similar to Task 1, concatenating it with the relevant job description cell (e.g., `C2`) and using `google/gemini-2.5-flash-preview` and your API key reference (e.g., `$M$2`).
+    -   Use your crafted prompt with the `MYGPT` function, similar to Task 1, concatenating it with the relevant job description cell (e.g., `C2`) and using `google/gemini-2.5-flash` and your API key reference (e.g., `$M$2`).
     -   Apply to a few rows first to validate that the model is doing what you want, then to all rows.
 4.  **Lock in Results:** Again, once processed, select all cells with results in your `Data Languages` column, copy them, and then paste special as values only.
 
-## Side Note: Is An LLM Needed just to extract 'R' and 'Python'?
+::: {.callout-note}
 
-A valid question at this point is "Is an LLM needed just to extract R and Python? Can't I just use a simple text search?" While this would work for Python, it would not work for R, unfortunately.
+**Side Note:** An interesting question at this point is "Is an LLM needed just to extract R and Python? Can't I just use a simple text search?" While this would work for Python, it would not work for R, unfortunately. 
 
-The challenge is that "R" is an extremely common letter in English text. A simple text search for "R" in job descriptions would return a lot of false positives like "R & D (research and development)", "H R (human resources)", "RA (research assistant)" and others.
+The challenge is that "R" is an extremely common letter in English text. A simple text search for "R" in job descriptions would return a lot of false positives like "R & D (research and development)", "H R (human resources)", "RA (research assistant)" and others. An LLM is more robust because it understands context, allowing it to accurately distinguish between what capital R means in "R programming" and what it means in "HR department".
+:::
 
-An LLM is more robust because it understands context, allowing it to accurately distinguish between what capital R means in "R programming" and what it means in "HR department".
+
 
 ------------------------------------------------------------------------
 
@@ -205,7 +211,7 @@ You will use either Julius or Cursor, the tool you used in a previous workshop, 
         - A scatter plot of 'Minimum Years Experience ' vs. 'Median Salary Estimate USD'. 
         - A box plot of 'Median Salary Estimate USD' grouped by 'Data Languages'. 
 
-        I will compile these into a report and add my own introduction, interpretation, and reflection.
+        I will add my own introduction, interpretation, and reflection.
         ```
 
 ## Side Note: Why This Multi-Step Process?
