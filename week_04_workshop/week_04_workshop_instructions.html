@@ -118,21 +118,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="part-1-setting-up-your-botpress-account-and-creating-your-bot" class="level1">
 <h1>Part 1: Setting Up Your Botpress Account and Creating Your Bot</h1>
 <ol type="1">
-<li><strong>Create Your Botpress Account:</strong>
+<li><p><strong>Create Your Botpress Account:</strong></p>
 <ul>
 <li>Go to <a href="https://botpress.com/">botpress.com</a></li>
 <li>Sign up for a free account using your email (Note: Botpress provides $5 in free credits, which should cover over 1000 messages on the default models. But for serious use, you will need to add credit to your account)</li>
 <li>Verify your email address if needed</li>
 </ul></li>
-<li><strong>Create a New Bot:</strong>
+<li><p><strong>Create a New Bot:</strong></p>
 <ul>
 <li>Once logged in, click “Create Bot”</li>
-<li>Name your bot something like “Portfolio Assistant” or “[Your Name] Course Bot”</li>
-<li>Follow the instructions to open the bot in the studio</li>
+<li>Skip the initial bot-creation flow. (Select “Other” for the bot type, then “Next” at the next two screens.)</li>
+<li>Find the button to “Open the bot in studio” and click it</li>
 </ul></li>
-</ol>
-<p>Your bot will use an “Autonomous Node”, which means you can define your AI agent’s purpose and behavior in just a few lines of text.</p>
-<ol start="3" type="1">
 <li><p><strong>Set Bot Instructions:</strong></p>
 <ul>
 <li>In the main configuration area, find the “Instructions” field</li>
@@ -140,15 +137,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/bot_instructions.jpg" class="img-fluid"></p>
 <ul>
 <li>Enter instructions like:</li>
-</ul>
-<pre><code>You are a portfolio assistant for a Generative AI course student. Your main tasks are:
+</ul></li>
+</ol>
+<pre class="{text}"><code>You are a portfolio assistant for a Generative AI course student. Your main tasks are:
 - Answer questions about the student's CV and background using the knowledge base
 - Provide information about the Graph Courses GenAI syllabus and curriculum based on your knowledge base
-- After answering a users question, politely ask them whether they might be interested in our upcoming showcase event on Friday June 27th at 3pm GMT or Sunday June 29th at 5pm GMT
+- After answering about two questions from the user, politely ask them whether they might be interested in our upcoming showcase event on Sunday October 5 at 5pm GMT or Wednesday October 8 at 3pm GMT
 - If they express interest, you will collect their name and email for registration and record those in the Attendees table tool.
 
-Be friendly, professional, and informative. Always try to be helpful while staying focused on these core topics. For other topics, politely decline to answer. </code></pre></li>
-</ol>
+Be friendly, professional, and informative. Always try to be helpful while staying focused on these core topics. For other topics, politely decline to answer. </code></pre>
 </section>
 <section id="part-2-set-up-the-knowledge-base" class="level1">
 <h1>Part 2: Set up the Knowledge Base</h1>

@@ -26,10 +26,8 @@ Your completed chatbot will be able to:
 
 2. **Create a New Bot:**
    - Once logged in, click "Create Bot" 
-   - Name your bot something like "Portfolio Assistant" or "[Your Name] Course Bot"
-   - Follow the instructions to open the bot in the studio
-
-Your bot will use an "Autonomous Node", which means you can define your AI agent's purpose and behavior in just a few lines of text.
+   - Skip the initial bot-creation flow. (Select "Other" for the bot type, then "Next" at the next two screens.)
+   - Find the button to "Open the bot in studio" and click it
 
 3. **Set Bot Instructions:**
    - In the main configuration area, find the "Instructions" field
@@ -37,15 +35,16 @@ Your bot will use an "Autonomous Node", which means you can define your AI agent
    ![](images/bot_instructions.jpg)
 
    - Enter instructions like:
-   ```
-   You are a portfolio assistant for a Generative AI course student. Your main tasks are:
-   - Answer questions about the student's CV and background using the knowledge base
-   - Provide information about the Graph Courses GenAI syllabus and curriculum based on your knowledge base
-   - After answering a users question, politely ask them whether they might be interested in our upcoming showcase event on Friday June 27th at 3pm GMT or Sunday June 29th at 5pm GMT
-   - If they express interest, you will collect their name and email for registration and record those in the Attendees table tool.
-   
-   Be friendly, professional, and informative. Always try to be helpful while staying focused on these core topics. For other topics, politely decline to answer. 
-   ```
+
+```{text}
+You are a portfolio assistant for a Generative AI course student. Your main tasks are:
+- Answer questions about the student's CV and background using the knowledge base
+- Provide information about the Graph Courses GenAI syllabus and curriculum based on your knowledge base
+- After answering about two questions from the user, politely ask them whether they might be interested in our upcoming showcase event on Sunday October 5 at 5pm GMT or Wednesday October 8 at 3pm GMT
+- If they express interest, you will collect their name and email for registration and record those in the Attendees table tool.
+
+Be friendly, professional, and informative. Always try to be helpful while staying focused on these core topics. For other topics, politely decline to answer. 
+```
 
 # Part 2: Set up the Knowledge Base
 
