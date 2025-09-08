@@ -25,11 +25,13 @@ Your completed chatbot will be able to:
    - Verify your email address if needed
 
 2. **Create a New Bot:**
-   - Once logged in, click "Create Bot" 
-   - Skip the initial bot-creation flow. (Select "Other" for the bot type, then "Next" at the next two screens.)
-   - Find the button to "Open the bot in studio" and click it
+   - Skip the initial bot-creation flow for new users (Select "Other" for the bot type, then "Next" at the next two screens.)
+   - Botpress may try to get you to sign up for a paid plan. Ignore this either by clicking "Not now" on the bottom right, or by clicking outside of the pop-up.
+   - Next, visit https://app.botpress.cloud/workspaces/, to view your bots. A default bot may have been created for you, click on it then click on "Edit in Studio" at the top right. If a default bot was not created for you, click on the blue "Create Bot" button. 
 
-3. **Set Bot Instructions:**
+# Part 2: Setting Up the Bot in Studio
+
+1. **Set Bot Instructions:**
    - In the main configuration area, find the "Instructions" field
 
    ![](images/bot_instructions.jpg)
@@ -46,14 +48,14 @@ You are a portfolio assistant for a Generative AI course student. Your main task
 Be friendly, professional, and informative. Always try to be helpful while staying focused on these core topics. For other topics, politely decline to answer. 
 ```
 
-# Part 2: Set up the Knowledge Base
+# Part 3: Set up the Knowledge Base
 
 1. **Navigate to Knowledge Base:**
    - Find the "Knowledge Base" section under the "Instructions" section 
    - Drag and drop your CV into the upload box. (If you don't want any of your personal information online, you can use a fake example CV from the internet, like here: [https://www.careers.ox.ac.uk/files/traditional-cv-examplepdf](https://www.careers.ox.ac.uk/files/traditional-cv-examplepdf))
    - Download the syllabus from: [https://drive.google.com/file/d/1NV-Mo2UgXQwdTu_Jv-HtCVnB9Pf2Grng/view](https://drive.google.com/file/d/1NV-Mo2UgXQwdTu_Jv-HtCVnB9Pf2Grng/view), and upload it to the knowledge base.
 
-# Part 3: Set Up Data Collection 
+# Part 4: Set Up Data Collection 
 
 1. **Create Attendees Table Structure:**
    - On the Botpress sidebar, click on the Tables icon. 
@@ -78,7 +80,7 @@ Be friendly, professional, and informative. Always try to be helpful while stayi
    - Click on the Add Tool plus icon
    - Click on Tables then the Attendees table, then "Create Rows". This gives your bot the ability to create rows in that table.
 
-# Part 4: Testing and Publishing Your Bot
+# Part 5: Testing and Publishing Your Bot
 
 1. **Use the Test Chat:**
    - The Botpress interface has a test chat panel on the right side of the screen
@@ -102,9 +104,9 @@ Be friendly, professional, and informative. Always try to be helpful while stayi
    <script src="https://files.bpcontent.cloud/2025/05/27/14/20250527145803-WFVSK7BL.js"></script>
    ```
 
-# Part 5: Embedding Your Bot on Your Website
+# Part 6: Embedding Your Bot on Your Website
 
-## Part 5A: Add Bot to Your Portfolio
+## Part 6A: Add Bot to Your Portfolio
 
 1. **Access Your GitHub Repository:**
    - Go to your GitHub Pages repository where your portfolio is hosted
@@ -126,7 +128,7 @@ Be friendly, professional, and informative. Always try to be helpful while stayi
    - You can track the status of your deployment by clicking on the "Actions" tab in the menu of the GitHub repository page
    - NOTE: Even after the site is done deploying, you may need to refresh the page a few times to see the bot appear, because your browser may be loading a cached version of the page.
 
-## Part 5B: Test Live Integration
+## Part 6B: Test Live Integration
 
 1. **Visit Your Live Site:** 
    - Go to your GitHub Pages URL
@@ -141,7 +143,7 @@ Be friendly, professional, and informative. Always try to be helpful while stayi
    - WATCH OUT: If you make any changes to your bot, be sure to click on "Publish" again in the top-right corner to save your changes.
 
 
-# Part 6: Optional - Customize the Appearance of Your Bot
+# Part 7: Optional - Customize the Appearance of Your Bot
 
 1. **Navigate to the Customize Dashboard:** To customize the appearance of your bot, again click on the "Share" button in the top-right corner then select "Configure". Make sure you are in the "Chat Bubble" section, then under the "Appearance and Theme" section, click on "Edit on Dashboard". 
 
@@ -151,7 +153,7 @@ Be friendly, professional, and informative. Always try to be helpful while stayi
 
 2. **Customize the Appearance:** On this page, under the "Theme" section, you can change the color and font, and under the General section you can change the name of the bot, a description, an icon and a composer placeholder.
 
-# Part 7: Submission 
+# Part 8: Submission 
 
 To submit: 
 
