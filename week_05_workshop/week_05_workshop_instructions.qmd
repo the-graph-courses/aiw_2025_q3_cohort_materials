@@ -191,8 +191,6 @@ Now that you have two modules, you should test the workflow again!
 5.  Under **New document's location folder**, search for and select your "GenAI Consultations" folder
 6.  Click **Save**
 
-![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/9d1ef82c-ade1-4ef0-bc62-9ce9c621b994/File.webp)
-
 ### Test and Save Workflow
 
 Run your complete workflow test again and save your work. If successful, check your Google Drive for the newly created report document. If you're unhappy with the report, try editing the prompt and rerunning your test until you get an output that works.
@@ -255,7 +253,7 @@ Congratulations! You've now built a complete automation that will process new fo
 
 Your automation is now live and will process new form submissions automatically!
 
-(Note that if you want to test the full functionality, after embedding the form in your website, you may want to set the frequency to 2 minutes or less, so you can see the results immediately.)
+(Note that if you want to test the full functionality, after embe you may want to set the frequency to 2 minutes or less, so you can see the results immediately.)
 
 ------------------------------------------------------------------------
 
