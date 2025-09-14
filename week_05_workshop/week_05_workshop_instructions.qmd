@@ -126,7 +126,7 @@ Make does not save your work automatically. You need to click the **Save** icon 
 
 ![](images/openrouter_select.jpg){width="389"}
 
-3.  Click **Create a connection** and enter the openrouter API key that was emailed to you some time ago.
+3.  Click **Create a connection**, then under Connection Type, select **OpenRouter** (not OpenRouter Auth2) and enter the openrouter API key that was emailed to you some time ago.
 
 ## Configure the AI Research Prompt
 
@@ -148,7 +148,7 @@ Do not include any prelude or postlude.
 Company Name and Geography:
 ```
 
-3.  After the prompt, click the variable selector and choose the company name field from your Google Form (e.g., "What is your company name...")
+3.  Right after the prompt (in the same box), click into the text area, and the variable selector should come up. Choose the company name field from your Google Form (e.g., "What is your company name...")
 
 So each time someone fills out the form, the company name will be added to the prompt, and send to the AI model.
 
@@ -158,7 +158,7 @@ So each time someone fills out the form, the company name will be added to the p
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/b4b2b521-eb1d-4524-9efc-3f870e43364e/File.jpeg?tl_px=148,182&br_px=1525,952&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=833,329)
 
-5.  In the **Model** field, type "search" and select **OpenAI: GPT-4o Search Preview**
+5.  In the **Model** field, type "search" and select **GPT-5**
     -   This model can search the internet to research companies, providing more comprehensive and current information. In the past we used Perplexity Sonar for this, but our testing shows that OpenAI's model works a bit better for this task.
 
 ![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/6e4b7179-b274-404a-afda-c350d6e7f45d/File.jpeg?tl_px=148,182&br_px=1525,952&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=869,298)
