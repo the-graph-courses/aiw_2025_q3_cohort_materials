@@ -255,6 +255,8 @@ Congratulations! You've now built a complete automation that will process new fo
 
 Your automation is now live and will process new form submissions automatically!
 
+(Note that if you want to test the full functionality, after embedding the form in your website, you may want to set the frequency to 2 minutes or less, so you can see the results immediately.)
+
 ------------------------------------------------------------------------
 
 # Part 7: Embedding the Form in Your Website
