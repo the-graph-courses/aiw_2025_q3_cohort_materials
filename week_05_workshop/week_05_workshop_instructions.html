@@ -76,7 +76,6 @@ ul.task-list li input[type="checkbox"] {
 <li>Monitor a Google Form for new submissions</li>
 <li>Use an AI model to research the potential client’s company and generate a report</li>
 <li>Create a formatted Google Doc with the research findings</li>
-<li>Send you an email notification with the report</li>
 </ol>
 <p>The goal here is to build an extremely simple automation that demonstrates the power of connecting different web services with an AI Large Language Model (LLM). Setting up this automation is quite a bit of work, but the beauty of automations of course is that (in theory) you should only need to set it up once!</p>
 <p>In the wild, you will find much more complex automations. Many organizations run a large fraction of their processes using automations on services like Make.com. With the rise of LLMs, these automations can do increasingly complex tasks.</p>
@@ -264,49 +263,8 @@ Company Name and Geography:</code></pre>
 </section>
 </section>
 </section>
-<section id="part-5-adding-email-notifications-optional-but-recommended" class="level1">
-<h1>Part 5: Adding Email Notifications (Optional but Recommended)</h1>
-<section id="set-up-resend-email-service" class="level2">
-<h2 class="anchored" data-anchor-id="set-up-resend-email-service">Set Up Resend Email Service</h2>
-<p>Sending emails from your automations is often useful but not required for this workshop. If you’d like to receive email notifications when new reports are generated, follow these steps:</p>
-<p>In an ideal case, you can connect your own email directly to the make.com service and draft and send emails from your account using your automations.</p>
-<p>But connecting personal Gmail accounts to Make.com requires a somewhat long setup process (see: <a href="https://www.youtube.com/watch?v=VlDT_D9zjnU" class="uri">https://www.youtube.com/watch?v=VlDT_D9zjnU</a>) and connecting company email accounts typically requires special permissions.</p>
-<p>To simplify our demonstration, we’ll instead use a service called Resend.com (email service for app development) for easy email delivery:</p>
-<ol type="1">
-<li>Go to <a href="https://resend.com">resend.com</a> and create a free account.</li>
-<li>On the homepage or API Keys page, create an API key and copy it.</li>
-</ol>
-</section>
-<section id="configure-email-module-in-make.com" class="level2">
-<h2 class="anchored" data-anchor-id="configure-email-module-in-make.com">Configure Email Module in Make.com</h2>
-<ol type="1">
-<li>Add a new module and search for <strong>Resend</strong></li>
-<li>Select <strong>Send an Email</strong></li>
-</ol>
-<p><img src="images/resend_email.jpg" class="img-fluid" width="246"></p>
-<ol start="3" type="1">
-<li>Click <strong>Creating a connection…</strong> and paste your Resend API key</li>
-<li>Click <strong>Save</strong></li>
-<li>Configure the email settings:
-<ul>
-<li><strong>From:</strong> <code>onboarding@resend.dev</code></li>
-<li><strong>Subject:</strong> Type <code>GenAI Report for</code> then add the company name variable</li>
-<li><strong>To:</strong> Enter your email address</li>
-<li><strong>Send email as:</strong> Select <strong>HTML</strong></li>
-<li><strong>HTML content:</strong> Add the AI response content variable from OpenRouter (same as used in Google Docs)</li>
-</ul></li>
-<li>Click <strong>Save</strong></li>
-</ol>
-<p><img src="https://colony-recorder.s3.amazonaws.com/files/2025-06-06/50ba9064-1f0e-4cc3-a1ad-e85bdb124e98/File.webp" class="img-fluid"></p>
-<section id="test-email-delivery" class="level3">
-<h3 class="anchored" data-anchor-id="test-email-delivery">Test Email Delivery</h3>
-<p>Run your complete workflow test. You should receive an email with the generated report. Save your work.</p>
-<hr>
-</section>
-</section>
-</section>
-<section id="part-6-activating-your-automation" class="level1">
-<h1>Part 6: Activating Your Automation</h1>
+<section id="part-5-activating-your-automation" class="level1">
+<h1>Part 5: Activating Your Automation</h1>
 <p>Congratulations! You’ve now built a complete automation that will process new form submissions automatically! Let’s make it live.</p>
 <section id="set-schedule-and-activate" class="level2">
 <h2 class="anchored" data-anchor-id="set-schedule-and-activate">Set Schedule and Activate</h2>
@@ -325,8 +283,8 @@ Company Name and Geography:</code></pre>
 <hr>
 </section>
 </section>
-<section id="part-7-embedding-the-form-in-your-website" class="level1">
-<h1>Part 7: Embedding the Form in Your Website</h1>
+<section id="part-6-embedding-the-form-in-your-website" class="level1">
+<h1>Part 6: Embedding the Form in Your Website</h1>
 <section id="get-the-embed-code" class="level2">
 <h2 class="anchored" data-anchor-id="get-the-embed-code">Get the Embed Code</h2>
 <ol type="1">
