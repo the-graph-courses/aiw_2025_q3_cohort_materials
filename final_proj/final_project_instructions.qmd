@@ -12,12 +12,12 @@ For your final project, you will design and present an AI solution relevant to y
 
 We recommend that your project should use *at least two* different modules of the course:
 
--   **A website** (Week 1)
--   **A data analytics product** (Week 2)
--   **A research/text analysis product** using LLMs (Week 3)
--   **A chatbot/agent** (Week 4)
--   **An automation workflow** (Week 5)
--   **A design/communication campaign** (Week 6)
+-   **Websites, documents and presentations** (Week 1)
+-   **Data analytics** (Week 2)
+-   **Deep research and text analysis** using LLMs (Week 3)
+-   **Chatbots/agents** (Week 4)
+-   **Automation workflows** (Week 5)
+-   **Designs, images and videos** (Week 6)
 
 # Instructor Feedback Sessions
 
