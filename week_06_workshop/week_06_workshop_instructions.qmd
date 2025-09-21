@@ -10,13 +10,15 @@ author: "The Graph Courses"
 
 In this session you will try two small but practical GenAI design workflows:
 
-1.  **Create a promotional flyer** for our course showcase using **Ideogram** for image generation and **Canva** for final editing. (You're encouraged to embed this on your website, and share this flyer with colleagues and friends to get them to come to the showcase. **Note**: If you invite friends to attend the final showcase, it's your responsibility to provide them with the workshop passcode and consider sending them a calendar invitation with the event details.)
+1.  **Create a promotional flyer** for our course showcase using **Canva** for image generation and final editing. 
+
+(You're encouraged to embed this on your website, and share this flyer with colleagues and friends to get them to come to the showcase. **Note**: If you invite friends to attend the final showcase, it's your responsibility to provide them with the workshop passcode and consider sending them a calendar invitation with the event details.)
 
 2.  (**Optional challenge**) **Turn a research paper into a visual abstract** using **Claude** and **HTML** or **SVG**.
 
 # Task 1 – AI Flyer for the Final Presentation
 
-**Account Required**: You'll need a free **Ideogram.ai** account. Sign up at **ideogram.ai** if you haven't already.
+**Account Required**: You'll need a free **Canva** account. Sign up at **canva.com** if you haven't already.
 
 ### 1-A Sign up for Canva Pro Trial
 
@@ -67,7 +69,7 @@ AI-generated text in images can often be garbled or incorrect. Canva's "Grab Tex
 
 1.  Hover over the image you want to use and click the "Edit photo" button.
 
-![Ideogram edit button](images/ideogram_edit_button.jpg){width="427"}
+![Canva edit button](images/canva_edit_photo_button.jpg){width="427"}
 
 2.  In the editing view, click the "Edit photo" button in the top left toolbar.
 
