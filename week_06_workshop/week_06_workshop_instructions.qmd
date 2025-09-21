@@ -82,10 +82,11 @@ Then click on Grab Text under Magic Studio. You may need to scroll right to see 
 
 ![Alt text](images/CleanShot%202025-09-21%20at%2009.05.02@2x.jpg)
 
-Wait a moment for the Ai to identigy the potential text sections. Then click on "All text" then "Grab"
-
+Wait a moment for the AI to identify the potential text sections. Then click on "All text" then "Grab"
 
 ![Alt text](images/CleanShot%202025-09-21%20at%2009.06.26@2x.jpg)
+
+Then, change the text as needed.
 
 ### Optional. Fix blemishes. 
 
@@ -108,31 +109,88 @@ But has long learning curve.
 
 :::
 
+### Optional. Add a QR code.
+
+You can also add a QR code to the flyer.
+
+Click on apps on the sidebar
+
+![Alt text](images/CleanShot%202025-09-21%20at%2012.10.54@2x.jpg)
+
+then search QR code. Select the option simply called "QR code". this is the official qr code by canva. 
+
+click to open it, then add the link to either your github website. (If you prefer you can also make a custom sign up form for the showcase, and add the link to that.)
+
 ### 1-C Share & Upload
 
 1.  Click on "Share" at the top right of the Canva page.
-2.  Click on "Download", change the file type to "PDF Standard" and click "Download".
-3.  Upload the PDF to your assignment submission area on the course page.
+2.  Click on "Download", leave as the default PNG file type and click "Download".
+3.  Upload the PNG to your assignment submission area on the course page.
+
+### Optional. Embed the flyer on your website.
+
+## Upload your flyer to GitHub
+
+-   To get back to your repository home, visit github.com, click on your profile at the top right, then click on "Your repositories"
+
+![Profile button](images/profile_button.jpg){width="215"}
+
+![Repositories button](images/repos_button.jpg){width="389"}
+
+-   Locate and click on your repository, which should be called something like `graph-ai-portfolio`
+
+-   Locate the button or icon to "Add file". Click on it and select "Upload file"
+
+![Add file button](images/add_file.jpg){width="473"}
+
+-   Drag your flyer PNG file into the box, then click on "Commit changes"
+
+-   Click **Commit changes**.
+
+-   Now click on the name of the uploaded flyer image → right‑click it → **Copy image address**. Now you have a link that can be embedded in the index.html file!
+
+## Update your portfolio with the flyer
+
+-   Back in ChatGPT, paste the image address into the prompt and ask the model to insert the flyer. Your prompt might look something like this:
+
+    ```         
+    Add this promotional flyer to my portfolio website. Place it at the bottom of the page, perhaps in a dedicated section about the upcoming showcase event.
+    The flyer image is at this address: [paste the image address here]
+    ```
+
+-   Copy the new HTML that ChatGPT generated → return to your *index.html* on GitHub → click the **edit file** (✎) button at the top right.
+
+![Edit file button](images/edit_file.jpg){width="473"}
+
+-   Delete all the existing code in the file, then paste in the new code from ChatGPT.
+
+-   At the top right, click the **Commit changes** button.
+
+-   Go to Actions, and click on the latest build to observe the build process. 
+
+![Actions and build](images/actions_and_build.jpg){width="473"}
+
+-   Your live site, if refreshed, should now display the flyer!
+
 
 # Optional Challenge – AI Visual Abstracts
 
+In this section, we'll use AI and design tools to turn a research paper into a visual abstract. A visual abstract is a pictorial representation of the main findings of a research paper, and is a great way to communicate the key results of a paper in an appealing visual format.
+
 **Account Required**: You'll need a free **Claude.ai** account. Sign up at **claude.ai** if you haven't already.
 
-In this section, we'll use AI and design tools to turn a research paper into a visual abstract. A visual abstract is a pictorial representation of the main findings of a research paper, and is a great way to communicate the key results of a paper in an appealing visual format.
+Other LLMs like chatgpt and gemini can also do this task, but we have found Claude consistently deliver better results.
 
 ### 2-A Choose Your Paper
 
-Pick any recent research paper you are interested in. Make sure you have access to both the paper title and abstract text, as you'll need to copy and paste these into Claude in the next step.
+Pick any recent research paper you are interested in and locate the title and abstract text. You'll copy and paste these into Claude in the next step.
+
 
 ------------------------------------------------------------------------
 
 ### 2-B Generate Visual Abstract with Claude
 
 Go to **claude.ai** and log in to your account. Use Claude to create either an SVG or HTML-based "visual abstract" of your chosen paper.
-
-(We recommend Claude over ChatGPT for this task because 
-- a) it tends to be better at design tasks, and 
-- b) it gives you an easy way to download SVG code.
 
 Choose one of the following two approaches (SVG or HTML) and give Claude the corresponding prompt. Feel free to try both approaches and compare the results.
 

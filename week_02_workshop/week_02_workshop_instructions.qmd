@@ -181,21 +181,38 @@ You will use Cursor to generate an R Markdown report.
 
 As a final step, you can add your report to your portfolio website which you created earlier in the course.
 
-1.  **Upload your Report:** Add your final report file (HTML or PDF) to the GitHub repository that hosts your portfolio website.
+## Upload Your Report to GitHub
 
-2.  **Get the Link:** Once uploaded, navigate to the file in your GitHub repository and copy its direct link.
+-   To get back to your repository home, visit github.com, click on your profile at the top right, then click on "Your repositories"
 
-3.  **Update Your Portfolio with ChatGPT:**
+-   Locate and click on your repository, which should be called something like `graph-ai-portfolio`
 
-    *   Go back to the ChatGPT conversation you used to build your portfolio website. (If you don't have it, you can start a new one, provide ChatGPT with your existing `index.html` file content, and then give it the new instructions).
-    *   Ask ChatGPT to add a new entry for this workshop. For example:
+-   Locate the button or icon to "Add file". Click on it and select "Upload file"
 
-        ```
-        Please update my portfolio website. I want to add a new project for "Workshop 2: Automated Data Analysis".
-        Include a brief description like "Analyzed Gapminder data to explore relationships between two global indicators using AI tools."
-        Then, add a link to my report: [paste the direct link to your uploaded report file here]
-        ```
+-   Drag your final report file (HTML or PDF) into the box, then click on "Commit changes"
 
-    *   ChatGPT will provide you with updated `index.html` code. Replace the content of your `index.html` file in your GitHub repository with this new code. Commit and push the changes.
-    
-    *   Verify that your live GitHub Pages site now shows the new entry and the link works.
+-   Click **Commit changes**.
+
+## Get the Direct Link to Your Report
+
+-   Click on the name of your uploaded report file (HTML or PDF) → right‑click it → **Copy link address**. Now you have a link to your report file!
+
+## Update Your Portfolio with ChatGPT
+
+-   Go back to the ChatGPT conversation you used to build your portfolio website. (If you don't have it, you can start a new one, provide ChatGPT with your existing `index.html` file content, and then give it the new instructions).
+
+-   Ask ChatGPT to add a new entry for this workshop. Your prompt might look something like this:
+
+    ```
+    Please update my portfolio website. I want to add a new project for "Workshop 2: Automated Data Analysis".
+    Include a brief description like "Analyzed Gapminder data to explore relationships between two global indicators using AI tools."
+    Then, add a link to my report: [paste the direct link to your uploaded report file here]
+    ```
+
+-   Copy the new HTML that ChatGPT generated → return to your *index.html* on GitHub → click the **edit file** (✎) button at the top right.
+
+-   Delete all the existing code in the file, then paste in the new code from ChatGPT.
+
+-   At the top right, click the **Commit changes** button.
+
+-   Go to Actions (if you have GitHub Pages set up with Actions), and click on the latest build to observe the build process. Your live site, if refreshed, should now show the new project entry and the link should work!
