@@ -501,3 +501,5 @@ Submit your R script or R Markdown file containing:
 ------------------------------------------------------------------------
 
 *Happy plotting! Remember, the best way to learn ggplot2 is through practice. Don't be afraid to experiment with different combinations of aesthetics, geoms, and themes.*
+
+

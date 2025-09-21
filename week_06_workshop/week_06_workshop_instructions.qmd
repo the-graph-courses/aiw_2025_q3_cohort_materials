@@ -18,49 +18,95 @@ In this session you will try two small but practical GenAI design workflows:
 
 **Account Required**: You'll need a free **Ideogram.ai** account. Sign up at **ideogram.ai** if you haven't already.
 
-### 1-A Generate the first draft in Ideogram
 
-1.  Go to **ideogram.ai** and log in to your account. (We're using ideogram instead of ChatGPT's image generation feature because the free image generation on ChatGPT is quite slow and unreliable.)
+Updated canva plans
 
-2.  In the prompt box, describe the image you want to create. Copy and paste the following recommended prompt, making sure to replace `[YOUR WEBSITE NAME HERE]` with your actual website name:
+go to canva.com
+click sign up or log in at the top right depending on if you already have an account
+visit [https://www.canva.com/pricing/](https://www.canva.com/pricing/){target="_blank"}
+change from yearly to monthly
+![Alt text](images/CleanShot%202025-09-21%20at%2007.48.04@2x.jpg)
+
+Then click to start a free trial
+![Alt text](images/CleanShot%202025-09-21%20at%2007.48.46@2x.jpg)
+
+You will need to put in your card details to start the trial. But you won't be charged. 
+
+Once you have started the trial, go to: [https://www.canva.com/settings/billing-and-teams](https://www.canva.com/settings/billing-and-teams){target="_blank"} and click "Cancel plan"
+
+![Alt text](images/CleanShot%202025-09-21%20at%2007.53.00@2x.jpg)
+
+If you have previously used up your free trial, create a new account with one of your alternate email addresses, or reach out to an instructor for help.
+
+Next, go to the canva home (click the home icon on the top left) or go to [https://www.canva.com/](https://www.canva.com/){target="_blank"}
+
+Then in the prompt box at the top, select 'Canva AI', and in the boxes below the box, select 'Create an image'
+
+![Alt text](images/CleanShot%202025-09-21%20at%2008.03.07@2x.jpg)
+ 
+
+2.  In the prompt box, describe the image you want to create. Copy and paste the following recommended prompt, or you can create your own prompt. In the recommended prompt, replace `[YOUR WEBSITE NAME HERE]` with your actual website name. You can also replace the theme colors with your own. A good place to get theme colors is [coolors.co](https://coolors.co/){target="_blank"}
+Feel free to experiment with other aspects of the prompt. 
 
 ```         
-Create an elegant modern flyer for the following event:
+Create an elegant modern, abstract, minimalist flyer for the following event:
 ► Main headline: "Graph Courses – AI Portfolio Showcase Day".
 ► Sub-headline: "Generative AI for Work & Research".
 ► Date and Time
-   • Friday, 27 Jun 2025  3 – 5 PM (GMT)
-   • Sunday, 29 Jun 2025  5 – 7 PM (GMT)
-► Sign up instructions: "To sign up, visit my website [YOUR WEBSITE NAME HERE] and open the chat bubble. Tell the AI agent you would like to attend the showcase. It will collect your details and we'll send you a confirmation email."
+   • Sunday, October 5, 5pm GMT
+   • Wednesday, October 8, 3pm GMT
+► "To register: Visit [YOUR WEBSITE NAME HERE] or scan the QR code, then use the chat feature to tell the AI agent you'd like to attend the showcase."
+► Our theme colors are [dark teal, light teal, and yellow].
 ```
+
+- Change the aspect ratio to 3:4 for a more poster-like format. 
+![Alt text](images/CleanShot%202025-09-21%20at%2008.03.07@2x.jpg)
 
 3.  Click **Generate**. Ideogram will create 4 different variations of your flyer. Choose the one you like best and click **Download**.
 
 ------------------------------------------------------------------------
 
-### 1-B Fix typography in Canva
+### 1-B Fix typography
 
-**Account Required**: You'll need a **Canva.com** account with pro features. Sign up and start a free trial at **canva.com**. **Important**: Cancel the trial within your account settings immediately after completing the signup process to avoid charges. (If you have already used up your free trial, please create a new account with a different email address. If this is not possible, please contact an instructor for help.)
+AI-generated text in the images are likely to be error-ridden or gibberish. To fix this, we can use Canva's Grab Text feature to make the text editable and fix the errors.
 
-AI-generated text in the images from Ideogram are likely to be error-ridden. To fix this, we can use Canva's Grab Text feature to make the text editable and fix the errors.
+Hover over the image you would like to use, and click the bottom right "edit" button.
 
-1.  Go to **canva.com** and log in to your account.
-2.  Drag-and-drop your downloaded Ideogram image into the Canva interface
-3.  Once the image is uploaded, click on it to select it, then click "Create design" at the top right of the screen.
+![Alt text](images/CleanShot%202025-09-21%20at%2008.20.56@2x.jpg)
 
-![](images/create_design.jpg){width="306"}
+In the view that pops up, click the edit button in the top left. 
 
-4.  With the image still selected, click the top left "edit" button.
-
-![](images/edit.jpg){width="166"} 
-
----
+![Alt text](images/CleanShot%202025-09-21%20at%2009.04.37@2x.jpg)
 
 Then click on Grab Text under Magic Studio. You may need to scroll right to see it. 
 
- ![](images/grab_text.jpg){width="311"}
+![Alt text](images/CleanShot%202025-09-21%20at%2009.05.02@2x.jpg)
 
-5.  Use the text tool to correct any typos, change fonts, and adjust colors as needed.
+Wait a moment for the Ai to identigy the potential text sections. Then click on "All text" then "Grab"
+
+
+![Alt text](images/CleanShot%202025-09-21%20at%2009.06.26@2x.jpg)
+
+### Optional. Fix blemishes. 
+
+After grabbing text, there may be some blemishes on the background graphic. We can use the "Magic Eraser" tool from Magic Studio to fix this.
+
+![Alt text](images/CleanShot%202025-09-21%20at%2009.11.34@2x.jpg)
+
+Then adjust your brush size, brush it over the blemishes, and click "Erase".
+![Alt text](images/CleanShot%202025-09-21%20at%2009.13.11@2x.jpg)
+
+::: {.callout-tip title="Side Note"}
+
+You can also try the magic edit tool
+
+Detailed edits are hard to do on Canva as it is not meant as a design tool. 
+
+You can use photopea which is a online free clone of photoshop.
+
+But has long learning curve. 
+
+:::
 
 ### 1-C Share & Upload
 

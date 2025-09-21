@@ -51,3 +51,5 @@ date,product,category,sales_amount,region,customer_type,units_sold
 2024-03-06,Rice Cooker,Appliances,69.99,South,Individual,1
 2024-03-07,Smartphone,Electronics,799.99,East,Individual,1
 2024-03-08,Coffee Table,Furniture,249.99,West,Individual,1
+
+
