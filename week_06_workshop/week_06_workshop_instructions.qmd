@@ -45,7 +45,7 @@ In this session you will try two small but practical GenAI design workflows:
 
 ### 1-B Generate Flyer Image in Canva
 
-1.  In the prompt box, describe the image you want to create. You can copy and paste the recommended prompt below, or write your own. Remember to replace `[YOUR WEBSITE NAME HERE]` with your website's name and customize the theme colors if you'd like. For color inspiration, check out [coolors.co](https://coolors.co/){target="_blank"}. Feel free to experiment with other aspects of the prompt.
+1.  In the prompt box, describe the image you want to create. You can copy and paste the recommended prompt below, or write your own. For color inspiration, check out [coolors.co](https://coolors.co/){target="_blank"}. Feel free to experiment with other aspects of the prompt.
 
 ```         
 Create an elegant modern, abstract, minimalist flyer for the following event:
